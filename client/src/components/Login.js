@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
-const API_URL = 'http://localhost:3001/api';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || 'ws://localhost:3001';
 
 const Login = ({ onLogin, onError }) => {
   const [username, setUsername] = useState('');
