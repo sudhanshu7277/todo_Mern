@@ -1,5 +1,293 @@
 /* Global styles */
 body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #333);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App container full-page */
+.app-container.full-page {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* App title */
+.app-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info span {
+  font-size: 1.1rem;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f44336;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e53935;
+}
+
+/* Toggle View Button */
+.toggle-view-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-view-btn:hover {
+  background: #f57c00;
+}
+
+/* Add Button Full Width */
+.add-btn.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* User Data List */
+.user-data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* User Data Item */
+.user-data-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.user-data-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.user-data-details {
+  flex: 1;
+}
+
+.user-data-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-data-details li {
+  margin-bottom: 5px;
+}
+
+.user-data-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn {
+  background: #2196f3;
+}
+
+.edit-btn:hover {
+  background: #1e88e5;
+}
+
+.delete-btn {
+  background: #f44336;
+}
+
+.delete-btn:hover {
+  background: #e53935;
+}
+
+/* Modal Styles */
+.modal {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  max-width: 800px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.user-data-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.employment-section, .income-section {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f44336;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #e53935;
+}
+
+/* Toastify Custom Styles */
+.Toastify__toast {
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.Toastify__toast--success {
+  background: rgba(76, 175, 80, 0.9);
+}
+
+.Toastify__toast--error {
+  background: rgba(244, 67, 54, 0.9);
+}
+
+.Toastify__toast--info {
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.Toastify__toast-body {
+  color: #fff;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .app-container,
+  .app-title,
+  .user-data-form,
+  .user-data-item,
+  .auth-form,
+  .auth-input,
+  .auth-btn,
+  .logout-btn,
+  .toggle-view-btn,
+  .add-btn,
+  .edit-btn,
+  .delete-btn,
+  .toggle-btn,
+  .Toastify__toast {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Loading and No Data */
+.loading, .no-data {
+  text-align: center;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+/* 
+body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1e1e1e, #333);
@@ -10,27 +298,26 @@ body {
     align-items: center;
   }
   
-  /* App container */
-  .app-container {
+  .app-container.full-page {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(10px);
-    max-width: 600px;
+    max-width: 100%;
     width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
   }
   
-  /* App title */
-  .app-title {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
+.app-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
   
-  /* User Info */
   .user-info {
     display: flex;
     justify-content: space-between;
@@ -42,7 +329,6 @@ body {
     font-size: 1.1rem;
   }
   
-  /* Logout Button */
   .logout-btn {
     padding: 8px 16px;
     border: none;
@@ -57,7 +343,6 @@ body {
     background: #e53935;
   }
   
-  /* Toggle View Button */
   .toggle-view-btn {
     display: block;
     margin: 0 auto 20px;
@@ -74,7 +359,6 @@ body {
     background: #f57c00;
   }
   
-  /* Todo Form */
   .todo-form {
     display: flex;
     margin-bottom: 20px;
@@ -114,14 +398,12 @@ body {
     background: #45a049;
   }
   
-  /* Todo List */
   .todo-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   
-  /* Todo Item */
   .todo-item {
     display: flex;
     justify-content: space-between;
@@ -188,7 +470,6 @@ body {
     color: #fff;
   }
   
-  /* Auth Forms */
   .auth-form {
     display: flex;
     flex-direction: column;
@@ -220,7 +501,6 @@ body {
     outline: none;
   }
   
-  /* Toastify Custom Styles */
   .Toastify__toast {
     border-radius: 8px;
     font-family: 'Arial', sans-serif;
@@ -229,15 +509,15 @@ body {
   }
   
   .Toastify__toast--success {
-    background: rgba(76, 175, 80, 0.9); /* Match add-btn color */
+    background: rgba(76, 175, 80, 0.9); 
   }
   
   .Toastify__toast--error {
-    background: rgba(244, 67, 54, 0.9); /* Match delete-btn color */
+    background: rgba(244, 67, 54, 0.9);
   }
   
   .Toastify__toast--info {
-    background: rgba(33, 150, 243, 0.9); /* Match edit-btn color */
+    background: rgba(33, 150, 243, 0.9);
   }
   
   .Toastify__toast-body {
@@ -248,7 +528,6 @@ body {
     background: rgba(255, 255, 255, 0.3);
   }
   
-  /* Reduced motion for accessibility */
   @media (prefers-reduced-motion: reduce) {
     .app-container,
     .app-title,
@@ -272,14 +551,12 @@ body {
     }
   }
   
-  /* Loading and No Todos */
   .loading, .no-todos {
     text-align: center;
     color: #ccc;
     font-style: italic;
   }
   
-  /* Responsive Design */
   @media (max-width: 480px) {
     .app-container {
       padding: 20px;
@@ -318,3 +595,19 @@ body {
       gap: 10px;
     }
   }
+
+.export-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.export-btn:hover {
+  background: #45a049;
+} */

@@ -1,4 +1,34 @@
-# MERN Todo App with RBAC, Authentication, Optimized Refresh Tokens, Real-Time Notifications, Animations, and Toast Notifications
+# MERN User Data App
+
+## Setup
+1. Install dependencies:
+   - cd client && npm install
+   - cd ../server && npm install
+2. Set .env files as per examples.
+3. Run locally:
+   - Backend: cd server && node server.js
+   - Frontend: cd client && npm start
+4. Deploy to Render as described in the code comments.
+
+## Features
+- User registration and login with JWT.
+- User-specific CRUD for user data with complex fields (employments, incomes).
+- Admin can view all data.
+- Real-time updates with Socket.io.
+- Responsive UI with animations and toasts.
+- Modal for adding/editing data.
+- Full-page display for data list.
+
+
+
+
+
+
+
+
+
+
+<!-- # MERN Todo App with RBAC, Authentication, Optimized Refresh Tokens, Real-Time Notifications, Animations, and Toast Notifications
 
 ## Setup
 1. Install dependencies:
@@ -22,4 +52,4 @@
 - Optimized token refresh: Handles concurrent 401s efficiently with queuing.
 - User-specific CRUD for todos.
 - Protected routes with automatic token refresh and retry.
-- Responsive UI with modern dark theme and animations.
+- Responsive UI with modern dark theme and animations. -->
